@@ -1,21 +1,23 @@
-# Coding Battle 2018 – Shaker
+# Shaker 2018 Coding Battle
 
-Voici les problèmes de la phase d'entraînement de la Coding Battle. Ceux-ci ont été imaginés et écrits par INSAlgo.
+Here are the problems we designed for the Shaker 2018 Coding Battle. These problems have been designed and written by INSAlgo.
 
-Les problèmes couverts étaient assez divers :
+* **Pre-contest (to try out the contest platform)**
+    - **A. 42**: a simple input / output test with conditional statements.
+    - **B. The Alchemist**: find the number of ways to satisfy a mathematical formula.
+    - **C. Riddle**, find the n-th term of a special sequence.
 
-* **Coding Battle – Échauffement**
-    - **A. 42**, qui consistait à trouver la réponse à la question sur la Vie, l'Univers et le Reste.
-    - **B. The Alchemist**, qui consistait à trouver le nombre de moyens de fabriquer une pierre philosophale.
-    - **C. Riddle**, qui consistait à trouver le n-ième terme d'une suite un peu particulière.
+## How to contribute
 
-Les solutions disponibles sont celles que nous avons écrites. Il y a souvent de nombreux moyens de résoudre un problème, nos solutions ne sont donc que des propositions.
+The solutions available are the ones we wrote and solutions from contributors that we approved. There are often many ways to solve a problem. Our solutions are not perfect but adapted to the skills we wanted to evaluate at each task. Please **feel free to add the solutions in the missing languages**, or better solutions than the ones we did.
 
-## Comment tester avec les entrées / sorties fournies
+If you translate an existing solution in a new language, please try to follow the structure, naming conventions and comments of the existing solution. Thanks for contributing :)
 
-La plateforme de la Coding Battle ne sera pas relancée avant le jour du concours. Cela est dû à plusieurs raisons : nous sommes une association étudiante dont l'organisation de concours n'est pas le motif principal et cela demanderait trop de temps ; pour des raisons de coûts, une telle infrastructure a un prix ; parce que vous n'en avez pas besoin ! 😉
+## How to test your program with the given input / output
 
-Pour tester vos solutions, vous pouvez utiliser la redirection de flux dans un terminal. Par exemple, sous Linux (sous Windows la syntaxe est similaire, et l'Internet foisonne de tutoriels et de posts de forum à ce propos) :
+We won't reopen the platform, because it is costly to host and you can test your solutions locally or import the contest on your own platform.
+
+To test your solutions, you can use piping in a terminal. For example, on Linux (if you don't use a Unix shell, you can find tutorials online):
 
 ```Shell
 # Python
@@ -30,15 +32,37 @@ js sol.js < ../input/input0.txt
 # etc
 ```
 
-## Conseils généraux
+## Common mistakes
 
-Nous avons eu l'occasion de lire pas mal de vos soumissions, et nous avons reçu beaucoup de questions durant le pré-concours. Voici quelques conseils en vrac, si vous désirez vous améliorer :
+We read a lot of your submissions in the last few contests, and received many questions. Here is some advice if you want to avoid common mistakes:
 
-* Apprenez à manipuler les entrées / sorties. En effet, tous les problèmes de programmation compétitive ont cela en commun, et bien souvent les entrées / sorties sont les mêmes (récupérer des entiers, des listes de nombres, des chaînes de caractères,…).
-* Soyez rigoureux dans vos réponses aux problèmes : respectez scrupuleusement les formats d'entrée et de sortie spécifiés dans les énoncés de problèmes. Vous pouvez vous appuyer sur les exemples d'entrées / sorties fournis pour mieux comprendre ce qui est attendu de votre programme.
-* Il est inutile de tester dans vos programmes que les entrées vérifient les limites indiquées par les énoncés de problèmes, car nous garantissons que les entrées fournies y sont conformes.
+* Learn to manage input / output. You can't afford to lose time on something like that when doing competitive programming. Most of the contests have the same format of input and output: reading space-separated lists of integers, strings, floats, or read multiple lines.
+* Read carefully the format of input and output: a typo can ruin your solution.
+* You don't have to check that the input is within the given bounds. The input **is** within the given bounds. Otherwise, why would we even provide the bounds?
 
 ## License
 
-Le contenu de ce dépôt est publié sous license GPL v3.0. Toute contribution par pull request est bien évidemment la bienvenue !
+This repo is under MIT license (see details below). **However, some of the pictures used in the statements are not in the public domain or under a free license. We obtained the consent from their authors to use them, and you need to do the same.**
 
+```
+MIT License
+
+Copyright (c) 2018 INSAlgo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.```
