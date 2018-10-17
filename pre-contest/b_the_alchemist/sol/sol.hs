@@ -7,5 +7,4 @@ main = do
 ans :: Int -> Int -> Int -> Int
 ans p l g = do
         length [(x,y)| x<-[0..m], y<-[0..l], x*x+y+x*y==g]
-        -- length [0| x<-[0..p], y<-[0..l], x*x+y+x*y==g]
-            where m = min p $ floor $ sqrt $ fromIntegral g
+            where m = min p $ floor $ sqrt $ fromIntegral g -- x really cannot be bigger than sqrt(g)
