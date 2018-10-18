@@ -33,6 +33,6 @@ for pi in p:
 # Print the first encountered solution in reversed order
 for i in range(L - 1, -1, -1):
     if dp[i]:
-        # abs(i - (sum(p)-i)) === sum(p)-2*i iff i <= sum(p)/2
+        # abs(i - (sum(p) - i)) === sum(p) - 2 * i iff i <= sum(p) / 2
         print(sum(p) - 2 * i)
         break
