@@ -7,6 +7,14 @@ Here are the problems we designed for the Shaker 2018 Coding Battle. These probl
     - **B. The Alchemist**: find the number of ways to satisfy a mathematical formula.
     - **C. Riddle**, find the n-th term of a special sequence.
 
+* **Coding Battle (theme: pirates)**
+    - **A. Loot Sharing**: calculate if the result of a simple formula is above or below a given target.
+    - **B. The Parrots of Tortuga**: find out which trainer can sell the biggest number of parrots for the amount of money you have.
+    - **C. Sea Storm**: decide if a line segment can be covered, given a list of line segments, and the possible locations of their center.
+    - **D. The Pirate Alphabet**: find the number of insertions needed to find the alphabet from a given string, with unlimited deletions.
+    - **E. Treasure Map**: find the maximum flow that you can get at the source of a tree, given the capacity of each edge and the amount emitted by each node.
+    - **F. Two Ships**: divide a crew in two such that no rivals are on the same boat, and the weights of the boats are as balanced as possible.
+
 ## How to contribute
 
 The solutions available are the ones we wrote and solutions from contributors that we approved. There are often many ways to solve a problem. Our solutions are not perfect but adapted to the skills we wanted to evaluate at each task. Please **feel free to add the solutions in the missing languages**, or better solutions than the ones we did.
