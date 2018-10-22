@@ -24,12 +24,12 @@ fn main() {
         number = next(&number);
 
         // Check if the number has already been met, which would mean
-        // that there is a cycle. Good new!
+        // that there is a cycle. Good news!
         if let Some(idx) = cycle_detection.get(&number).cloned() {
             // We have to determine the length of our jump.
-            // Indeed, we know that is exactly `i - idx` steps, we'll end up with
-            // the same number, so why bother? We have to be careful though to
-            // not making a jump to long, because otherwise the output number
+            // Indeed, we know that in exactly `i - idx` steps, we'll end up with
+            // the same number, so why bother? We have to be careful though not to
+            // to make a jump too long, because otherwise the output number
             // would be wrong.
             // If we knew that cycles are of "reasonable" length, we could store
             // the sequence of seen numbers in order to be able to return the right
@@ -51,14 +51,14 @@ fn main() {
 
 /// Generate the next number is the sequence.
 fn next(number: &String) -> String {
-    // Count occurrence of each digits in the current number.
-    // Note: a Vec isn't needed here since we know the length at compile time.
+    // Count occurrences of each digits in the current number.
+    // Note: a Vec isn't needed here since we know the length at compilation time.
     let mut count = [0; 10];
     for c in number.chars() {
         count[c.to_digit(10).unwrap() as usize] += 1;
     }
 
-    // Create the new number by just going though the counter.
+    // Create the new number by just going through the counter.
     let mut chars = String::new();
     for (i, n) in count.iter().enumerate() {
         if *n > 0 {
