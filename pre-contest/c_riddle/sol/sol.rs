@@ -13,32 +13,52 @@ fn main() {
     io::stdin().read_line(&mut line).unwrap();
     let n = line.trim().parse::<i32>().unwrap();
 
-    let mut todo_rename = HashMap::new();
+    // We create a map to detect cycles.
+    // Hint: go have a look into Rust's FAQ about the implementation of
+    // this HashMap.
+    let mut cycle_detection = HashMap::new();
 
     // n steps
     let mut i = 0;
     while i < n {
         number = next(&number);
 
-        if let Some(idx) = todo_rename.get(&number).cloned() {
+        // Check if the number has already been met, which would mean
+        // that there is a cycle. Good new!
+        if let Some(idx) = cycle_detection.get(&number).cloned() {
+            // We have to determine the length of our jump.
+            // Indeed, we know that is exactly `i - idx` steps, we'll end up with
+            // the same number, so why bother? We have to be careful though to
+            // not making a jump to long, because otherwise the output number
+            // would be wrong.
+            // If we knew that cycles are of "reasonable" length, we could store
+            // the sequence of seen numbers in order to be able to return the right
+            // number using a simple subtraction. But optimization is led by benchmarks,
+            // and this implementation is fast enough.
             let diff = i - idx;
             let skip = (n - i - 1) / diff;
             i += skip * diff + 1;
         } else {
-            todo_rename.insert(number.clone(), i);
+            // Here, no cycle. Just add this number to the map and increase i by 1.
+            cycle_detection.insert(number.clone(), i);
             i += 1;
         }
     }
 
+    // We have a result! \o\ /o/
     println!("{}", number);
 }
 
+/// Generate the next number is the sequence.
 fn next(number: &String) -> String {
+    // Count occurrence of each digits in the current number.
+    // Note: a Vec isn't needed here since we know the length at compile time.
     let mut count = [0; 10];
     for c in number.chars() {
         count[c.to_digit(10).unwrap() as usize] += 1;
     }
 
+    // Create the new number by just going though the counter.
     let mut chars = String::new();
     for (i, n) in count.iter().enumerate() {
         if *n > 0 {
